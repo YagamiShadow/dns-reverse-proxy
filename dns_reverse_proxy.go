@@ -11,7 +11,8 @@ Example usage:
                 -default 8.8.8.8:53 \
                 -route .example.com.=8.8.4.4:53 \
                 -route .example2.com.=8.8.4.4:53,1.1.1.1:53 \
-                -allow-transfer 1.2.3.4,::1
+				-allow-transfer 1.2.3.4,::1 \
+				-typeroute CAA=127.0.0.1:4553
 
 A query for example.net or example.com will go to 8.8.8.8:53, the default.
 However, a query for subdomain.example.com will go to 8.8.4.4:53. -default
